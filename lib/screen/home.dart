@@ -23,15 +23,18 @@ class _HomeScreenState extends State<HomeScreen> {
           itemBuilder: (context, index) {
             final user = users[index];
             final email = user['email'];
-            
+
             return ListTile(
-              leading: Text('$index'),
+              leading: CircleAvatar(
+              child: Text('${index +1}'),
+              ),
               title: Text(email),
-            );
+             
+              );
           }),
       floatingActionButton: FloatingActionButton(
         onPressed: fetchUsers,
-        ),
+      ),
     );
   }
 
