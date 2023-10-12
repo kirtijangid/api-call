@@ -36,6 +36,10 @@ class _HomeScreenState extends State<HomeScreen> {
               );
           }),
       floatingActionButton: FloatingActionButton(
+        child: Text('Press here',
+        ),
+        shape: BeveledRectangleBorder(
+          borderRadius: BorderRadiusDirectional.circular(5)),
         onPressed: fetchUsers,
       ),
     );
