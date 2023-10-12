@@ -14,6 +14,11 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Text('api call'),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: fetchUsers),
     );
+  }
+
+  void fetchUsers() {
   }
 }
