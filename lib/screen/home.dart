@@ -25,11 +25,13 @@ class _HomeScreenState extends State<HomeScreen> {
             final email = user['email'];
             
             return ListTile(
+              leading: Text('$index'),
               title: Text(email),
             );
           }),
       floatingActionButton: FloatingActionButton(
-        onPressed: fetchUsers),
+        onPressed: fetchUsers,
+        ),
     );
   }
 
