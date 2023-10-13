@@ -24,35 +24,31 @@ class _HomeScreenState extends State<HomeScreen> {
             final user = users[index];
             final email = user['email'];
 
-            final imageUrl = user['picture']['thumbnail'] ;
+            final imageUrl = user['picture']['thumbnail'];
             return ListTile(
               leading: ClipRRect(
                 borderRadius: BorderRadius.circular(30),
                 child: Image.network(imageUrl),
-              // child: Text('${index +1}'),
+                // child: Text('${index +1}'),
               ),
               title: Text(email),
-             
-              );
+            );
           }),
-      floatingActionButton: 
-      Container(
+      floatingActionButton: Container(
         height: 100.0,
         width: 100.0,
         child: FittedBox(
-      child: FloatingActionButton(
-        child: Text('Press here',
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: 10
+          child: FloatingActionButton(
+            child: Text(
+              'Press here',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 10),
+            ),
+            onPressed: fetchUsers,
+          ),
         ),
-        ),
-        
-        onPressed: fetchUsers,
       ),
-      ),
-      ),
-      );
+    );
   }
 
   void fetchUsers() async {
