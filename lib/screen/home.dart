@@ -35,14 +35,24 @@ class _HomeScreenState extends State<HomeScreen> {
              
               );
           }),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: 
+      Container(
+        height: 100.0,
+        width: 100.0,
+        child: FittedBox(
+      child: FloatingActionButton(
         child: Text('Press here',
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          fontSize: 10
         ),
-        shape: BeveledRectangleBorder(
-          borderRadius: BorderRadiusDirectional.circular(5)),
+        ),
+        
         onPressed: fetchUsers,
       ),
-    );
+      ),
+      ),
+      );
   }
 
   void fetchUsers() async {
